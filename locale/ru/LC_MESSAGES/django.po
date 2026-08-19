@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi."
+msgstr "Регистрация успешно выполнена."
+
+msgid "Karra 1 dan 10 gacha bo'lishi kerak."
+msgstr "Таблица умножения должна быть от 1 до 10."
+
+msgid "Foydalanuvchi muvaffaqiyatli yaratildi."
+msgstr "Пользователь успешно создан."
+
+msgid "Foydalanuvchi topilmadi."
+msgstr "Пользователь не найден."
+
+msgid "Parol noto'g'ri."
+msgstr "Неверный пароль."
+
+msgid "Login muvaffaqiyatli amalga oshirildi."
+msgstr "Вход выполнен успешно."
+
+msgid "Chiqish muvaffaqiyatli amalga oshirildi."
+msgstr "Выход выполнен успешно."
+
+msgid "Ma'lumotlar muvaffaqiyatli olindi."
+msgstr "Данные успешно получены."
+
+msgid "Ma'lumot muvaffaqiyatli yangilandi."
+msgstr "Данные успешно обновлены."
+
+msgid "Ma'lumot muvaffaqiyatli o'chirildi."
+msgstr "Данные успешно удалены."
+
+msgid "Bunday foydalanuvchi mavjud."
+msgstr "Такой пользователь уже существует."
+
+msgid "Username kiritilishi shart."
+msgstr "Имя пользователя обязательно."
+
+msgid "Email kiritilishi shart."
+msgstr "Email обязателен."
+
+msgid "Parol kiritilishi shart."
+msgstr "Пароль обязателен."
+
+msgid "Parol kamida 6 ta belgidan iborat bo'lishi kerak."
+msgstr "Пароль должен содержать не менее 6 символов."
+
+msgid "Email noto'g'ri formatda."
+msgstr "Неверный формат email."
+
+msgid "Username allaqachon mavjud."
+msgstr "Это имя пользователя уже занято."
+
+msgid "Email allaqachon mavjud."
+msgstr "Этот email уже используется."
+
+msgid "Karra jadvali"
+msgstr "Таблица умножения"
+
+msgid "Savol"
+msgstr "Вопрос"
+
+msgid "Javob"
+msgstr "Ответ"
+
+msgid "Raqam"
+msgstr "Номер"
+
+msgid "Til"
+msgstr "Язык"
+
+msgid "Muvaffaqiyatli"
+msgstr "Успешно"
+
+msgid "Xatolik yuz berdi."
+msgstr "Произошла ошибка."
+
+msgid "Noto'g'ri so'rov."
+msgstr "Неверный запрос."
+
+msgid "Siz tizimga kirmagansiz."
+msgstr "Вы не вошли в систему."
+
+msgid "Token noto'g'ri yoki muddati tugagan."
+msgstr "Токен недействителен или истёк."
+
+msgid "Ruxsat berilmagan."
+msgstr "Доступ запрещён."
+
+msgid "Foydalanuvchi ma'lumotlari"
+msgstr "Данные пользователя"
+
+msgid "Ism"
+msgstr "Имя"
+
+msgid "Foydalanuvchi nomi"
+msgstr "Имя пользователя"
+
+msgid "Parol"
+msgstr "Пароль"
+
+msgid "Email manzil"
+msgstr "Email адрес"
+
+msgid "Yangi parol"
+msgstr "Новый пароль"
+
+msgid "Eski parol"
+msgstr "Старый пароль"
+
+msgid "Til muvaffaqiyatli o'zgartirildi."
+msgstr "Язык успешно изменён."
+
+msgid "O'zbekcha"
+msgstr "Узбекский"
+
+msgid "Ruscha"
+msgstr "Русский"
+
+msgid "Inglizcha"
+msgstr "Английский"

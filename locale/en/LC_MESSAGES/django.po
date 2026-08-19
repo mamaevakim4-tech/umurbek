@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi."
+msgstr "Registration completed successfully."
+
+msgid "Karra 1 dan 10 gacha bo'lishi kerak."
+msgstr "The multiplication table must be from 1 to 10."
+
+msgid "Foydalanuvchi muvaffaqiyatli yaratildi."
+msgstr "User created successfully."
+
+msgid "Foydalanuvchi topilmadi."
+msgstr "User not found."
+
+msgid "Parol noto'g'ri."
+msgstr "Incorrect password."
+
+msgid "Login muvaffaqiyatli amalga oshirildi."
+msgstr "Login successful."
+
+msgid "Chiqish muvaffaqiyatli amalga oshirildi."
+msgstr "Logout successful."
+
+msgid "Ma'lumotlar muvaffaqiyatli olindi."
+msgstr "Data retrieved successfully."
+
+msgid "Ma'lumot muvaffaqiyatli yangilandi."
+msgstr "Data updated successfully."
+
+msgid "Ma'lumot muvaffaqiyatli o'chirildi."
+msgstr "Data deleted successfully."
+
+msgid "Bunday foydalanuvchi mavjud."
+msgstr "This user already exists."
+
+msgid "Username kiritilishi shart."
+msgstr "Username is required."
+
+msgid "Email kiritilishi shart."
+msgstr "Email is required."
+
+msgid "Parol kiritilishi shart."
+msgstr "Password is required."
+
+msgid "Parol kamida 6 ta belgidan iborat bo'lishi kerak."
+msgstr "Password must contain at least 6 characters."
+
+msgid "Email noto'g'ri formatda."
+msgstr "Invalid email format."
+
+msgid "Username allaqachon mavjud."
+msgstr "This username is already taken."
+
+msgid "Email allaqachon mavjud."
+msgstr "This email is already in use."
+
+msgid "Karra jadvali"
+msgstr "Multiplication table"
+
+msgid "Savol"
+msgstr "Question"
+
+msgid "Javob"
+msgstr "Answer"
+
+msgid "Raqam"
+msgstr "Number"
+
+msgid "Til"
+msgstr "Language"
+
+msgid "Muvaffaqiyatli"
+msgstr "Successful"
+
+msgid "Xatolik yuz berdi."
+msgstr "An error occurred."
+
+msgid "Noto'g'ri so'rov."
+msgstr "Invalid request."
+
+msgid "Siz tizimga kirmagansiz."
+msgstr "You are not logged in."
+
+msgid "Token noto'g'ri yoki muddati tugagan."
+msgstr "Token is invalid or expired."
+
+msgid "Ruxsat berilmagan."
+msgstr "Permission denied."
+
+msgid "Foydalanuvchi ma'lumotlari"
+msgstr "User information"
+
+msgid "Ism"
+msgstr "Name"
+
+msgid "Foydalanuvchi nomi"
+msgstr "Username"
+
+msgid "Parol"
+msgstr "Password"
+
+msgid "Email manzil"
+msgstr "Email address"
+
+msgid "Yangi parol"
+msgstr "New password"
+
+msgid "Eski parol"
+msgstr "Old password"
+
+msgid "Til muvaffaqiyatli o'zgartirildi."
+msgstr "Language changed successfully."
+
+msgid "O'zbekcha"
+msgstr "Uzbek"
+
+msgid "Ruscha"
+msgstr "Russian"
+
+msgid "Inglizcha"
+msgstr "English"
