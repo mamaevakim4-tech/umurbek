@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class KarraConfig(AppConfig):
-    name = 'karra'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "karra"

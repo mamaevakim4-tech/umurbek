@@ -1,24 +1,47 @@
-from django.urls import path, include
+from django.urls import path
 
 from .views import (
-    RegisterView,
-    MeView,
-    KarraView,
+    GameAnswerAPIView,
+    GameResultAPIView,
+    GameStartAPIView,
+    LanguageAPIView,
+    LoginAPIView,
+    LogoutAPIView,
+    MeAPIView,
+    RegisterAPIView,
 )
 
 urlpatterns = [
     path(
-        "api/<str:language>/register/",
-        RegisterView.as_view()
+        "register/",
+        RegisterAPIView.as_view(),
     ),
-
     path(
-        "api/<str:language>/me/",
-        MeView.as_view()
+        "login/",
+        LoginAPIView.as_view(),
     ),
-
     path(
-        "api/<str:language>/karra/<int:number>/",
-        KarraView.as_view()
+        "logout/",
+        LogoutAPIView.as_view(),
+    ),
+    path(
+        "me/",
+        MeAPIView.as_view(),
+    ),
+    path(
+        "language/",
+        LanguageAPIView.as_view(),
+    ),
+    path(
+        "game/start/",
+        GameStartAPIView.as_view(),
+    ),
+    path(
+        "game/answer/",
+        GameAnswerAPIView.as_view(),
+    ),
+    path(
+        "game/results/",
+        GameResultAPIView.as_view(),
     ),
 ]

@@ -2,124 +2,51 @@ msgid ""
 msgstr ""
 "Language: uz\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
-msgid "Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi."
-msgstr "Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi."
+msgid "Registration successful"
+msgstr "Ro'yxatdan o'tish muvaffaqiyatli"
 
-msgid "Karra 1 dan 10 gacha bo'lishi kerak."
-msgstr "Karra 1 dan 10 gacha bo'lishi kerak."
+msgid "Invalid username or password"
+msgstr "Username yoki parol noto'g'ri"
 
-msgid "Foydalanuvchi muvaffaqiyatli yaratildi."
-msgstr "Foydalanuvchi muvaffaqiyatli yaratildi."
+msgid "Login successful"
+msgstr "Login muvaffaqiyatli"
 
-msgid "Foydalanuvchi topilmadi."
-msgstr "Foydalanuvchi topilmadi."
+msgid "Refresh token is required"
+msgstr "Refresh token kerak"
 
-msgid "Parol noto'g'ri."
-msgstr "Parol noto'g'ri."
+msgid "Logout successful"
+msgstr "Logout muvaffaqiyatli"
 
-msgid "Login muvaffaqiyatli amalga oshirildi."
-msgstr "Login muvaffaqiyatli amalga oshirildi."
+msgid "Invalid token"
+msgstr "Token noto'g'ri"
 
-msgid "Chiqish muvaffaqiyatli amalga oshirildi."
-msgstr "Chiqish muvaffaqiyatli amalga oshirildi."
+msgid "Language changed"
+msgstr "Til o'zgartirildi"
 
-msgid "Ma'lumotlar muvaffaqiyatli olindi."
-msgstr "Ma'lumotlar muvaffaqiyatli olindi."
+msgid "Level must be easy, medium or hard"
+msgstr "Daraja easy, medium yoki hard bo'lishi kerak"
 
-msgid "Ma'lumot muvaffaqiyatli yangilandi."
-msgstr "Ma'lumot muvaffaqiyatli yangilandi."
+msgid "Game started"
+msgstr "O'yin boshlandi"
 
-msgid "Ma'lumot muvaffaqiyatli o'chirildi."
-msgstr "Ma'lumot muvaffaqiyatli o'chirildi."
+msgid "game_id and answer are required"
+msgstr "game_id va answer kerak"
 
-msgid "Bunday foydalanuvchi mavjud."
-msgstr "Bunday foydalanuvchi mavjud."
+msgid "Game not found"
+msgstr "O'yin topilmadi"
 
-msgid "Username kiritilishi shart."
-msgstr "Username kiritilishi shart."
+msgid "Game is finished"
+msgstr "O'yin tugagan"
 
-msgid "Email kiritilishi shart."
-msgstr "Email kiritilishi shart."
+msgid "Answer must be a number"
+msgstr "Javob son bo'lishi kerak"
 
-msgid "Parol kiritilishi shart."
-msgstr "Parol kiritilishi shart."
+msgid "Great! You finished the game!"
+msgstr "Zo'r! Siz o'yinni tugatdingiz!"
 
-msgid "Parol kamida 6 ta belgidan iborat bo'lishi kerak."
-msgstr "Parol kamida 6 ta belgidan iborat bo'lishi kerak."
+msgid "Correct!"
+msgstr "To'g'ri!"
 
-msgid "Email noto'g'ri formatda."
-msgstr "Email noto'g'ri formatda."
-
-msgid "Username allaqachon mavjud."
-msgstr "Username allaqachon mavjud."
-
-msgid "Email allaqachon mavjud."
-msgstr "Email allaqachon mavjud."
-
-msgid "Karra jadvali"
-msgstr "Karra jadvali"
-
-msgid "Savol"
-msgstr "Savol"
-
-msgid "Javob"
-msgstr "Javob"
-
-msgid "Raqam"
-msgstr "Raqam"
-
-msgid "Til"
-msgstr "Til"
-
-msgid "Muvaffaqiyatli"
-msgstr "Muvaffaqiyatli"
-
-msgid "Xatolik yuz berdi."
-msgstr "Xatolik yuz berdi."
-
-msgid "Noto'g'ri so'rov."
-msgstr "Noto'g'ri so'rov."
-
-msgid "Siz tizimga kirmagansiz."
-msgstr "Siz tizimga kirmagansiz."
-
-msgid "Token noto'g'ri yoki muddati tugagan."
-msgstr "Token noto'g'ri yoki muddati tugagan."
-
-msgid "Ruxsat berilmagan."
-msgstr "Ruxsat berilmagan."
-
-msgid "Foydalanuvchi ma'lumotlari"
-msgstr "Foydalanuvchi ma'lumotlari"
-
-msgid "Ism"
-msgstr "Ism"
-
-msgid "Foydalanuvchi nomi"
-msgstr "Foydalanuvchi nomi"
-
-msgid "Parol"
-msgstr "Parol"
-
-msgid "Email manzil"
-msgstr "Email manzil"
-
-msgid "Yangi parol"
-msgstr "Yangi parol"
-
-msgid "Eski parol"
-msgstr "Eski parol"
-
-msgid "Til muvaffaqiyatli o'zgartirildi."
-msgstr "Til muvaffaqiyatli o'zgartirildi."
-
-msgid "O'zbekcha"
-msgstr "O'zbekcha"
-
-msgid "Ruscha"
-msgstr "Ruscha"
-
-msgid "Inglizcha"
-msgstr "Inglizcha"
+msgid "Incorrect!"
+msgstr "Noto'g'ri!"
