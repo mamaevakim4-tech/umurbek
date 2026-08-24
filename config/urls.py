@@ -7,6 +7,6 @@ def index(request):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("game.urls")),
+    path("api/", include("karra.urls")),
     path("", index),
 ]
