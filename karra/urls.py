@@ -1,28 +1,27 @@
+from django.contrib import admin
 from django.urls import path
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
 from .views import (
-    GameAnswerAPIView,
-    GameResultAPIView,
-    GameStartAPIView,
-    LanguageAPIView,
+    RegisterAPIView,
     LoginAPIView,
     LogoutAPIView,
     MeAPIView,
-    RegisterAPIView,
+    LanguageAPIView,
+    GameStartAPIView,
+    GameAnswerAPIView,
+    GameResultAPIView,
 )
 
-def index(request):
-    return render(request, "index.html")
-
 urlpatterns = [
-    path("", index),
-    path("register/", RegisterAPIView.as_view()),
-    path("login/", LoginAPIView.as_view()),
-    path("logout/", LogoutAPIView.as_view()),
-    path("me/", MeAPIView.as_view()),
-    path("language/", LanguageAPIView.as_view()),
-    path("game/start/", GameStartAPIView.as_view()),
-    path("game/answer/", GameAnswerAPIView.as_view()),
-    path("game/results/", GameResultAPIView.as_view()),
+    path("admin/", admin.site.urls),
+    path("", TemplateView.as_view(template_name="index.html")),
+    path("api/register/", RegisterAPIView.as_view()),
+    path("api/login/", LoginAPIView.as_view()),
+    path("api/logout/", LogoutAPIView.as_view()),
+    path("api/me/", MeAPIView.as_view()),
+    path("api/language/", LanguageAPIView.as_view()),
+    path("api/game/start/", GameStartAPIView.as_view()),
+    path("api/game/answer/", GameAnswerAPIView.as_view()),
+    path("api/game/result/", GameResultAPIView.as_view()),
 ]
