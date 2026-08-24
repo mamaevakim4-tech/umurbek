@@ -1,49 +1,248 @@
-<h1>Karra</h1>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karra</title>
 
-<input id="username" placeholder="username">
-<input id="password" type="password" placeholder="password">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<button onclick="login()">Login</button>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f2937;
+        }
 
-<hr>
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+        }
 
-<p id="question"></p>
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
 
-<input id="answer" type="number">
-<button onclick="answer()">Javob</button>
+        .logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-<p id="result"></p>
+        .logo h1 {
+            font-size: 32px;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .logo p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .login {
+            margin-bottom: 25px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 13px 15px;
+            margin-bottom: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input:focus {
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 13px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .login-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .login-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .game {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 25px;
+        }
+
+        .game-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: #eff6ff;
+            border-radius: 14px;
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #1d4ed8;
+            margin-bottom: 18px;
+        }
+
+        .answer-btn {
+            background: #111827;
+            color: white;
+        }
+
+        .answer-btn:hover {
+            background: #000000;
+        }
+
+        .result {
+            min-height: 24px;
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 22px;
+            }
+
+            .logo h1 {
+                font-size: 28px;
+            }
+
+            .question {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="logo">
+            <h1>Karra</h1>
+            <p>Matematikani mashq qiling</p>
+        </div>
+
+        <div class="login">
+            <input
+                id="username"
+                class="input"
+                placeholder="Username"
+            >
+
+            <input
+                id="password"
+                class="input"
+                type="password"
+                placeholder="Password"
+            >
+
+            <button class="login-btn" onclick="login()">
+                Kirish
+            </button>
+        </div>
+
+        <div class="game">
+
+            <div class="game-title">
+                Savolga javob bering
+            </div>
+
+            <div id="question" class="question">
+                Avval tizimga kiring
+            </div>
+
+            <input
+                id="answer"
+                class="input"
+                type="number"
+                placeholder="Javobingiz"
+            >
+
+            <button class="answer-btn" onclick="answer()">
+                Javobni tekshirish
+            </button>
+
+            <p id="result" class="result"></p>
+
+        </div>
+
+    </div>
+
+</div>
 
 <script>
 let token = "";
 let gameId = 0;
 
 async function login() {
-    let res = await fetch("/api/login/", {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    const res = await fetch("/api/login/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: document.getElementById("username").value,
-            password: document.getElementById("password").value
+            username: username,
+            password: password
         })
     });
 
-    let data = await res.json();
+    const data = await res.json();
 
     if (!res.ok) {
-        document.getElementById("result").innerText = JSON.stringify(data);
+        document.getElementById("result").innerText =
+            data.error || "Login xatosi";
         return;
     }
 
     token = data.access;
 
-    startGame();
+    document.getElementById("result").innerText = "";
+
+    await startGame();
 }
 
 async function startGame() {
-    let res = await fetch("/api/game/start/", {
+    const res = await fetch("/api/game/start/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -54,15 +253,35 @@ async function startGame() {
         })
     });
 
-    let data = await res.json();
+    const data = await res.json();
+
+    if (!res.ok) {
+        document.getElementById("result").innerText =
+            data.error || "O'yinni boshlashda xatolik";
+        return;
+    }
 
     gameId = data.game_id;
 
-    document.getElementById("question").innerText = data.question;
+    document.getElementById("question").innerText =
+        data.question;
+
+    document.getElementById("answer").value = "";
+
+    document.getElementById("answer").focus();
 }
 
 async function answer() {
-    let res = await fetch("/api/game/answer/", {
+    if (!token) {
+        document.getElementById("result").innerText =
+            "Avval tizimga kiring";
+        return;
+    }
+
+    const answerValue =
+        Number(document.getElementById("answer").value);
+
+    const res = await fetch("/api/game/answer/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -70,17 +289,37 @@ async function answer() {
         },
         body: JSON.stringify({
             game_id: gameId,
-            answer: Number(document.getElementById("answer").value)
+            answer: answerValue
         })
     });
 
-    let data = await res.json();
+    const data = await res.json();
+
+    if (!res.ok) {
+        document.getElementById("result").innerText =
+            data.error || "Xatolik yuz berdi";
+        return;
+    }
 
     document.getElementById("result").innerText =
         data.message || "";
 
+    document.getElementById("answer").value = "";
+
     if (data.question) {
-        document.getElementById("question").innerText = data.question;
+        document.getElementById("question").innerText =
+            data.question;
+
+        document.getElementById("answer").focus();
     }
 }
+
+document.getElementById("answer").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        answer();
+    }
+});
 </script>
+
+</body>
+</html>
