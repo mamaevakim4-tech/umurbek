@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Natija</title>
+</head>
+<body>
+    <h1>O‘yin natijasi</h1>
+
+    <p id="score"></p>
+    <p id="message"></p>
+
+    <button onclick="window.location.href='/game/'">
+        Yana o‘ynash
+    </button>
+
+    <script>
+        async function getResult() {
+            const token = localStorage.getItem("access");
+
+            const params = new URLSearchParams(window.location.search);
+            const gameId = params.get("game_id");
+
+            const response = await fetch(
+                "/api/game/result/?game_id=" + gameId,
+                {
+                    method: "GET",
+                    headers: {
+                        "Authorization": "Bearer " + token
+                    }
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                document.getElementById("message").textContent =
+                    data.error || "Natijani olishda xatolik";
+                return;
+            }
+
+            document.getElementById("score").textContent =
+                "Score: " + data.score;
+
+            document.getElementById("message").textContent =
+                data.message;
+        }
+
+        getResult();
+    </script>
+</body>
+</html>
