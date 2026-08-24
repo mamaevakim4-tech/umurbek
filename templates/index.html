@@ -1,0 +1,86 @@
+<h1>Karra</h1>
+
+<input id="username" placeholder="username">
+<input id="password" type="password" placeholder="password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<p id="question"></p>
+
+<input id="answer" type="number">
+<button onclick="answer()">Javob</button>
+
+<p id="result"></p>
+
+<script>
+let token = "";
+let gameId = 0;
+
+async function login() {
+    let res = await fetch("/api/login/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value
+        })
+    });
+
+    let data = await res.json();
+
+    if (!res.ok) {
+        document.getElementById("result").innerText = JSON.stringify(data);
+        return;
+    }
+
+    token = data.access;
+
+    startGame();
+}
+
+async function startGame() {
+    let res = await fetch("/api/game/start/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({
+            level: "easy"
+        })
+    });
+
+    let data = await res.json();
+
+    gameId = data.game_id;
+
+    document.getElementById("question").innerText = data.question;
+}
+
+async function answer() {
+    let res = await fetch("/api/game/answer/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({
+            game_id: gameId,
+            answer: Number(document.getElementById("answer").value)
+        })
+    });
+
+    let data = await res.json();
+
+    document.getElementById("result").innerText =
+        data.message || "";
+
+    if (data.question) {
+        document.getElementById("question").innerText = data.question;
+    }
+}
+</script>
